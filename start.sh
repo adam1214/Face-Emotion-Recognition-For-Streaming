@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -r ./*.log
+rm -rf ./*.log
 MASTER="localhost"
 PORT=80
 
