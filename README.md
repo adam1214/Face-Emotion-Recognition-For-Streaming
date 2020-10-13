@@ -14,7 +14,7 @@
 	2. Use your account login to gitlab `docker login biicgitlab.ee.nthu.edu.tw:5050`  
 	3. Download the image `sudo docker pull 140.114.84.199:4999/fer_streaming_gpu`  
 * **Code structure**  
-	1. `git clone https://biicgitlab.ee.nthu.edu.tw/crowpeter/fer_streaming_gpu`  
+	1. `git clone https://biicgitlab.ee.nthu.edu.tw/crowpeter/fer_streaming_gpu_ver.git`  
 
 ## Run docker and server
 * After download the image and code, please follow the step as below:
