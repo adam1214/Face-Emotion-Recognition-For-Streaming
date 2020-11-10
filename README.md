@@ -1,7 +1,7 @@
 # FER_streaming_gpu_ver
 
 > **Engineer Team**  
-> last update: 2020.10.13  
+> last update: 2020.11.10  
 > 
 > @ author: Peter Wu  
 > @ email: crowpeter27@gmail.com  
@@ -33,20 +33,20 @@
 
     The master for controling communication between worker and client
 
-* **worker_example.py**
+* **worker_example_2.py**
 
     The main block process video and feedback the result, you can carry out multiple worker to process multiple client request.
 
 * **client_example.py**
 
     Sending a video to master to do FER. The parameter explain as below:
-    1. -u [default:ws://localhost:8080/client/ws/speech]
+    1. *-u* [default:ws://localhost:8080/client/ws/speech]
         The url you wnat to connect.
-    2. -video [default:True]
+    2. *-video* [default:True]
         Show the result on your screen or not.
-    3. -info [default:True]
+    3. *-info* [default:True]
         Save the result in fer_result
-    4. audiofile [default: ./example_wav/Test.mp4]
+    4. *audiofile* [default: ./example_wav/Test.mp4]
         The mo4 path you want to compute.
     (recommand)
 
