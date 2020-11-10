@@ -30,6 +30,7 @@
     2.  Start container: 
 
         (GPU) `sudo docker run --gpus all -it --privileged -ti -p 8080:80 -v <your_path>:/media/fer_streaming 140.114.84.199:4999/fer_streaming_gpu bash`
+        
         (CPU) `sudo docker run --gpus all -it --privileged -ti -p 8080:80 -v <your_path>:/media/fer_streaming 140.114.84.199:4999/fer_streaming bash`
         
     3.  Check whether the `start.sh` and `stop.sh` in the folder `/media/ferstreaming` of your container.
