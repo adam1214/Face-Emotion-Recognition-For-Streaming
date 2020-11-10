@@ -8,6 +8,13 @@
 > @ mattermost: crowpeter27  
 
 
+## Update log
+
+*2020.10.13*---version 1
+
+*2020.11.10*---Fix some bug: 1) send message in multi-thread may cause some error and 2) the transition bytes of client will be fixed in 1/3 of 1 frame to avoid some error
+
+
 ## Requirement
 * **Image**   
 	1. Install docker, opencv, keras, tornado in your device  
