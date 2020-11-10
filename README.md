@@ -19,7 +19,8 @@
 * **Image**   
 	1. Install docker, opencv, keras, tornado in your device  
 	2. Use your account login to gitlab `docker login biicgitlab.ee.nthu.edu.tw:5050`  
-	3. Download the image `sudo docker pull 140.114.84.199:4999/fer_streaming_gpu`  
+	3. (GPU) Download the image `sudo docker pull 140.114.84.199:4999/fer_streaming_gpu` 
+    4. (CPU) Download the image `sudo docker pull 140.114.84.199:4999/fer_streaming` 
 * **Code structure**  
 	1. `git clone https://biicgitlab.ee.nthu.edu.tw/crowpeter/fer_streaming_gpu_ver.git`  
 
@@ -28,7 +29,9 @@
     1. `cd <your_path>`
     2.  Start container: 
 
-        `sudo docker run --gpus all -it --privileged -ti -p 8080:80 -v <your_path>:/media/fer_streaming 140.114.84.199:4999/fer_streaming_gpu bash`
+        (GPU) `sudo docker run --gpus all -it --privileged -ti -p 8080:80 -v <your_path>:/media/fer_streaming 140.114.84.199:4999/fer_streaming_gpu bash`
+        (CPU) `sudo docker run --gpus all -it --privileged -ti -p 8080:80 -v <your_path>:/media/fer_streaming 140.114.84.199:4999/fer_streaming bash`
+        
     3.  Check whether the `start.sh` and `stop.sh` in the folder `/media/ferstreaming` of your container.
     4.  Start server: `./start.sh`
     5.  Run client in your local:
