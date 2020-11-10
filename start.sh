@@ -40,5 +40,5 @@ fi
 #start worker and connect it to the master
 #export GST_PLUGIN_PATH=/opt/gst-kaldi-nnet2-online/src/:/opt/kaldi/src/gst-plugin/
 
-python ./kaldi-gstreamer-server/kaldigstserver/worker_example.py -u ws://$MASTER:$PORT/worker/ws/speech 2>> ./worker1.log &
+python ./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py -u ws://$MASTER:$PORT/worker/ws/speech 2>> ./worker1.log &
 #python3 ./kaldi-gstreamer-server/kaldigstserver/worker_example.py -u ws://$MASTER:$PORT/worker/ws/speech 2>> ./worker2.log &

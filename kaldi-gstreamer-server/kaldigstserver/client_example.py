@@ -1,5 +1,5 @@
 import argparse
-#from ws4py.client.threadedclient import WebSocketClient
+# from ws4py.client.threadedclient import WebSocketClient
 import time
 import threading
 import sys
@@ -79,7 +79,7 @@ class MyClient():
     @gen.coroutine
     def run(self):
         
-        c=0
+        # c=0
         connect_flag = True
         encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 90] 
         
@@ -95,22 +95,23 @@ class MyClient():
         
         while connect_flag:
             ret, frame = self.audiofile.read()
-
+            
             if not ret:
                 connect_flag = False
                 break
             
+            frame = cv2.resize(frame,(1280,720),fx=0,fy=0, interpolation = cv2.INTER_CUBIC)
+            # frame = cv2.resize(frame,(640,480),fx=0,fy=0, interpolation = cv2.INTER_CUBIC)
             self.global_img_box.append(frame)
+            
             
             result, frame2 = cv2.imencode('.jpg', frame, encode_param)
             data = pickle.dumps(frame2)
             size = len(data)
-            # print(size)
             data = struct.pack(">L", size) + data
-            # print(len(data))
-            for i in range(0,len(data),60000):
-                yield self.send_data(data[i:i+60000])
-                
+            send_size = int(len(data)/3)
+            for i in range(0,len(data),send_size):
+                yield self.send_data(data[i:i+send_size])
         self.ws.write_message("EOS")
     
     @gen.coroutine
@@ -120,21 +121,20 @@ class MyClient():
 
     def received_message(self, m):
         if m is None:
-            #print("Websocket closed() called")
+            print("Websocket closed() called")
             self.final_hyp_queue.put(" ".join(self.final_hyps))
             self.ioloop.stop()
             return
         
-        # print(str(m) + "\n")
         response = json.loads(str(m))
         
         if response['status'] == 0:
-            # print(response)
+            print(response)
             if 'result' in response:
                 emo_prob = response['result']['hypotheses'][0]['emo']
                 face_coor =  response['result']['hypotheses'][0]['face']
                 frame_idx = response['result']['count']
-                print(frame_idx, emo_prob, face_coor)
+                # print(frame_idx, emo_prob, face_coor)
                 # print(self.global_img_box[frame_idx])
                 if face_coor:
                     emo_txt, color = self.make_color_and_test(emo_prob)
@@ -174,9 +174,6 @@ class MyClient():
     def get_full_hyp(self, timeout=10):
         return self.final_hyp_queue.get(timeout)
 
-    # def closed(self, code, reason=None):
-    #     print("Websocket closed() called")
-    #     self.final_hyp_queue.put(" ".join(self.final_hyps))
     def draw_text(self, coordinates, image_array, text, color, x_offset=0, y_offset=0,
                                                     font_scale=2, thickness=2):
         x, y = coordinates[:2]

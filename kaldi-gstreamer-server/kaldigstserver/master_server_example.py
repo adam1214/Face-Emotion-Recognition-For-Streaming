@@ -268,8 +268,8 @@ class DecoderSocketHandler(tornado.websocket.WebSocketHandler):
     def send_event(self, event):
         event["id"] = self.id
         event_str = str(event)
-        if len(event_str) > 100:
-            event_str = event_str[:97] + "..."
+        # if len(event_str) > 100:
+        #     event_str = event_str[:97] + "..."
         logging.info("%s: Sending event %s to client" % (self.id, event_str))
         self.write_message(json.dumps(event).replace('False', 'false').replace('\'', '\"'))
 

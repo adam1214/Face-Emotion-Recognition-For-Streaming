@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov  9 16:06:48 2020
+
+@author: peterwu
+"""
+
 import logging
 import logging.config
 import time
@@ -15,15 +23,15 @@ import tornado.locks
 import tornado.websocket
 import tensorflow as tf
 import common
+from tornado.concurrent import run_on_executor
 from concurrent.futures import ThreadPoolExecutor
-# from tornado.concurrent import run_on_executor
 import numpy as np
 import struct
 # import cv2
 # import pickle
 # from fer_moudle import fer_model
 import warnings
-# from threading import Thread
+from threading import Thread
 
 import cv2
 # import struct ## new
@@ -37,7 +45,7 @@ import tornado
 from tensorflow.python.keras.backend import set_session
 
 
-# import threading
+import threading
 from tornado.concurrent import Future
 from tornado.platform import asyncio
 import asyncio
@@ -55,17 +63,14 @@ sess = tf.Session(config=config)
 graph = tf.get_default_graph()
 set_session(sess)
 
-
-
 warnings.filterwarnings("ignore")
 logger = logging.getLogger(__name__)
 
-executor = ThreadPoolExecutor(max_workers=1)
+executor = ThreadPoolExecutor(max_workers=5)
 
 CONNECT_TIMEOUT = 5
 SILENCE_TIMEOUT = 100
 # USE_NNET2 = False
-
         
 class Worker():
     STATE_CREATED = 0
@@ -125,10 +130,11 @@ class Worker():
         self.state = self.STATE_CONNECTED
         self.last_partial_result = ""
         self.last_decoder_message = time.time()
-        # self.process_in()
-        while True: 
+        while True:
+            # tornado.ioloop.IOLoop.add_callback(self.detect_and_send())
             msg = yield self.ws.read_message()
             self.received_message(msg)
+            # print(len(self.image_in_buf))
             if msg is None:
                 # print(0)
                 print('msg is none')
@@ -140,8 +146,8 @@ class Worker():
     def process_in(self):
         global sess
         global graph
-        while True:
-        # while self.state in [self.STATE_EOS_RECEIVED, self.STATE_CONNECTED, self.STATE_INITIALIZED, self.STATE_PROCESSING]:
+        # while True:
+        while self.state in [self.STATE_EOS_RECEIVED, self.STATE_CONNECTED, self.STATE_INITIALIZED, self.STATE_PROCESSING]:
             if self.image_in_buf:
                 if self.image_in_buf[0] == 'EOS':
                     # self.image_out_buf.append('EOS')
@@ -172,66 +178,52 @@ class Worker():
                                                                        emo=emo.tolist(),\
                                                                        face=face.tolist())],
                                                                        final=False,count=self.ccount))
-                            try:
-                                self.ws.write_message(json.dumps(event))
-                                del event
-                            except:
-                                e = sys.exc_info()[1]
-                                print('ERROR_face_respond')
-                                print(e)
-                                logger.warning("Failed to send event to master: %s" % e)                      
+                            self.image_out_buf.append(event)
+                            # try:
+                            #     self.ws.write_message(json.dumps(event))
+                            #     del event
+                            # except:
+                            #     e = sys.exc_info()[1]
+                            #     print('ERROR_face_respond')
+                            #     print(e)
+                            #     logger.warning("Failed to send event to master: %s" % e)
+                                
                     else: #no face detected!
                         event = dict(status=common.STATUS_SUCCESS,
                                       result=dict(hypotheses=[dict(transcript='return result',\
                                                                    emo=[],\
                                                                    face=[])],
                                                                    final=False,count=self.ccount))
-                        try:
-                            self.ws.write_message(json.dumps(event))
-                            del event
-                        except:
-                            e = sys.exc_info()[1]
-                            print('ERROR_noface_respond')
-                            print(e)
-                            logger.warning("Failed to send event to master: %s" % e)
+                        self.image_out_buf.append(event)
+                        # try:
+                        #     self.ws.write_message(json.dumps(event))
+                        #     del event
+                        # except:
+                        #     e = sys.exc_info()[1]
+                        #     print('ERROR_noface_respond')
+                        #     print(e)
+                        #     logger.warning("Failed to send event to master: %s" % e)
                                 
                     del self.image_in_buf[0]
                     self.ccount+=1
-                # time.sleep(0.005)
+                time.sleep(0.001)
                     # self.last_decoder_message = time.time()
             else:
                 pass
-        
-        
-    def process_out(self):
-        self.last_decoder_message = time.time()
-        # while True:
-        while self.state in [self.STATE_EOS_RECEIVED, self.STATE_CONNECTED, self.STATE_INITIALIZED, self.STATE_PROCESSING]:
-            if self.image_out_buf:
-                if self.image_out_buf[0] == 'EOS':
-                    del self.image_out_buf[0]
-                    self.feedback_end_to_master()
-                    # self.finish_request()
-                    continue
-                # self.ccount+=1
-                else:
-                    self.last_decoder_message = time.time()
-                    event = dict(status=common.STATUS_SUCCESS,
-                                  result=dict(hypotheses=[dict(transcript='return result',\
-                                                               emo=self.image_out_buf[0]['emo'],\
-                                                               face=self.image_out_buf[0]['face_coor'])],
-                                              final=False,count=self.image_out_buf[0]['frame']))
-                try:
-                    self.ws.write_message(json.dumps(event))
-                    del self.image_out_buf[0]
-                    del event
-                except:
-                    e = sys.exc_info()[1]
-                    logger.warning("Failed to send event to master: %s" % e)  
-                    # self.finish_request()
-                    self.feedback_end_to_master()
-            else:
-                pass
+    
+    def run_send(self):
+        if self.image_out_buf:
+            event = self.image_out_buf[0]
+            try:
+                self.ws.write_message(json.dumps(event))
+                del self.image_out_buf[0]
+            except:
+                e = sys.exc_info()[1]
+                print('ERROR_face_respond')
+                print(e)
+                logger.warning("Failed to send event to master: %s" % e)
+        else:
+            pass
 
     def guard_timeout(self):
         global SILENCE_TIMEOUT
@@ -260,9 +252,7 @@ class Worker():
             # self.decoder_pipeline.init_request(self.request_id, content_type)
             self.last_decoder_message = time.time()
             
-            # tornado.ioloop.IOLoop.current().run_in_executor(executor, self.guard_timeout)
-            # tornado.ioloop.IOLoop.instance().run_in_executor(executor, self.process_in)
-            # tornado.ioloop.IOLoop.current().run_in_executor(executor, self.process_out)
+            tornado.ioloop.IOLoop.instance().run_in_executor(executor, self.process_in)
             
             self.image_in_buf = []
             self.image_out_buf = []
@@ -275,14 +265,13 @@ class Worker():
             if self.state != self.STATE_CANCELLING and self.state != self.STATE_EOS_RECEIVED and self.state != self.STATE_FINISHED:
                 self.state = self.STATE_PROCESSING
                 self.image_in_buf.append(m)
-                # self.state = self.STATE_EOS_RECEIVED
-                # self.feedback_end_to_master()
                 
             else:
                 logger.info("%s: Ignoring EOS, worker already in state %d" % (self.request_id, self.state))
                 
         else:
             if self.state != self.STATE_CANCELLING and self.state != self.STATE_EOS_RECEIVED and self.state != self.STATE_FINISHED:
+                self.run_send()
                 if isinstance(m, bytes):
                     rev_m = m
                     if self.img_start_flag:
@@ -296,7 +285,6 @@ class Worker():
                         if len(self.img_data) == self.img_size:
                             self.count+=1
                             self.image_in_buf.append(self.img_data)
-                            
                             # initial
                             del self.img_data
                             self.img_start_flag = True
@@ -305,12 +293,6 @@ class Worker():
                             
                         elif len(self.img_data) > self.img_size:
                             print('ERROR_size_mismatch')
-                            
-                        # # initial
-                        # del self.img_data
-                        # self.img_start_flag = True
-                        # self.img_size = 0
-                        # self.img_data = b''
                         
                     self.state = self.STATE_PROCESSING
                     
@@ -324,23 +306,19 @@ class Worker():
     def finish_request(self):
         if self.state == self.STATE_EOS_RECEIVED:
             # connection closed when we are not doing anything
-            # self.decoder_pipeline.finish_request()
             self.state = self.STATE_FINISHED
             return
         if self.state == self.STATE_CONNECTED:
             # connection closed when we are not doing anything
-            # self.decoder_pipeline.finish_request()
             self.state = self.STATE_FINISHED
             return
         if self.state == self.STATE_INITIALIZED:
             # connection closed when request initialized but with no data sent
-            # self.decoder_pipeline.finish_request()
             self.state = self.STATE_FINISHED
             return
         if self.state != self.STATE_FINISHED:
             logger.info("%s: Master disconnected before decoder reached EOS?" % self.request_id)
             self.state = self.STATE_CANCELLING
-            # self.decoder_pipeline.cancel()
             counter = 0
             while self.state == self.STATE_CANCELLING:
                 counter += 1
@@ -431,8 +409,7 @@ def main_loop(uri, full_post_processor=None):
             yield tornado.gen.sleep(CONNECT_TIMEOUT)
         # fixes a race condition
         yield tornado.gen.sleep(0.1)
-
-
+        
 
 def main():
     logging.basicConfig(level=logging.DEBUG, format="%(levelname)8s %(asctime)s %(message)s ")
@@ -440,7 +417,6 @@ def main():
     parser = argparse.ArgumentParser(description='Worker for kaldigstserver')
     parser.add_argument('-u', '--uri', default="ws://localhost:8888/worker/ws/speech", dest="uri", help="Server<-->worker websocket URI")
     parser.add_argument('-f', '--fork', default=1, dest="fork", type=int)
-    # parser.add_argument('-c', '--conf', dest="conf", help="YAML file with decoder configuration")
 
     args = parser.parse_args()
 
@@ -450,10 +426,8 @@ def main():
 
     # fork off the post-processors before we load the model into memory
     tornado.process.Subprocess.initialize()
-    # tornado.ioloop.IOLoop.instance().add_callback(main_loop, args.uri)
-    tornado.ioloop.IOLoop.instance().spawn_callback(main_loop, args.uri)
-    tornado.ioloop.IOLoop.instance().start()
-
+    tornado.ioloop.IOLoop.current().add_callback(main_loop, args.uri)
+    tornado.ioloop.IOLoop.current().start()
 
 if __name__ == "__main__":
     main()
