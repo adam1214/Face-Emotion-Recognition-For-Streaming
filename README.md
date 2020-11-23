@@ -84,6 +84,6 @@
         
 ## Pressure test on 140.114.84.204 (Localhost) (Edited by Chun Yu Chen)
 *    Code explain
-    *    allocate_client.sh：How many clients you want to allocate. (for loop)
-    *    start.sh：How many workers you want to allocate.(for loop)
-    *    avg_sec.py：Estimate average time of all seconds that workers spent.
+        *    allocate_client.sh：How many clients you want to allocate. (for loop)
+        *    start.sh：How many workers you want to allocate.(for loop)
+        *    avg_sec.py：Estimate average time of all seconds that workers spent.
