@@ -87,3 +87,12 @@
         *    allocate_client.sh：How many clients you want to allocate. (for loop)
         *    start.sh：How many workers you want to allocate.(for loop)
         *    avg_sec.py：Estimate average time of all seconds that workers spent.
+
+*    Pressure test result
+        *    1 worker：8.64s
+        *    2 worker：8.19s
+        *    3 worker：8.09s
+        *    4 worker：8.29s
+        *    5 worker：8.72s
+        *    10 worker：14.37s
+        *    15 worker：21.58s
