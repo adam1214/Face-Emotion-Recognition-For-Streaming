@@ -26,12 +26,12 @@ def rate_limited(maxPerSecond):
     def decorate(func):
         last_time_called = [0.0]
         def rate_limited_function(*args,**kargs):
-            elapsed = time.clock() - last_time_called[0]
+            elapsed = time.process_time() - last_time_called[0]
             left_to_wait = min_interval - elapsed
             if left_to_wait > 0:
                 yield gen.sleep(left_to_wait)
             ret = func(*args,**kargs)
-            last_time_called[0] = time.clock()
+            last_time_called[0] = time.process_time()
             return ret
         return rate_limited_function
     return decorate
@@ -246,3 +246,6 @@ if __name__ == "__main__":
     t = time.time()
     main()
     print(time.time()-t)
+    f = open('time_result.txt', 'a+')
+    f.write(str(time.time()-t)+'\n')
+    f.close()

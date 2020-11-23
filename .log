@@ -1,0 +1,70 @@
+Using TensorFlow backend.
+WARNING:tensorflow:From ./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py:59: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From ./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py:62: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-11-13 09:59:38.054294: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+Using TensorFlow backend.
+WARNING:tensorflow:From ./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py:59: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From ./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py:62: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-11-13 09:59:38.062050: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-11-13 09:59:38.067181: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3000000000 Hz
+2020-11-13 09:59:38.068317: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5fa3620 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-13 09:59:38.068333: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-11-13 09:59:38.069341: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-11-13 09:59:38.069357: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (-1)
+2020-11-13 09:59:38.069367: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: 6b9be3b53134
+2020-11-13 09:59:38.069371: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: 6b9be3b53134
+2020-11-13 09:59:38.069432: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: Not found: was unable to find libcuda.so DSO loaded into this program
+2020-11-13 09:59:38.069450: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 455.23.5
+WARNING:tensorflow:From ./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py:63: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+   DEBUG 2020-11-13 09:59:38,070 Starting up worker 
+   DEBUG 2020-11-13 09:59:38,071 Using selector: EpollSelector 
+2020-11-13 09:59:38.077781: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3000000000 Hz
+2020-11-13 09:59:38.078960: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5c22f60 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-13 09:59:38.078979: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-11-13 09:59:38.080306: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-11-13 09:59:38.080324: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (-1)
+2020-11-13 09:59:38.080336: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: 6b9be3b53134
+2020-11-13 09:59:38.080340: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: 6b9be3b53134
+2020-11-13 09:59:38.080407: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: Not found: was unable to find libcuda.so DSO loaded into this program
+2020-11-13 09:59:38.080426: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 455.23.5
+WARNING:tensorflow:From ./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py:63: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+   DEBUG 2020-11-13 09:59:38,081 Starting up worker 
+   DEBUG 2020-11-13 09:59:38,083 Using selector: EpollSelector 
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+ WARNING 2020-11-13 09:59:38,100 From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers. 
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+ WARNING 2020-11-13 09:59:38,117 From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers. 
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+ WARNING 2020-11-13 09:59:38,263 From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+ 
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+ WARNING 2020-11-13 09:59:38,278 From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+ 
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+ WARNING 2020-11-13 09:59:38,947 From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+ 
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+ WARNING 2020-11-13 09:59:38,966 From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+ 
+    INFO 2020-11-13 09:59:39,113 Opening websocket connection to master server 
+    INFO 2020-11-13 09:59:39,116 Opened websocket connection to server 
+    INFO 2020-11-13 09:59:39,149 Opening websocket connection to master server 
+    INFO 2020-11-13 09:59:39,155 Opened websocket connection to server 
