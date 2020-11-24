@@ -1,8 +1,9 @@
 #!/bin/bash
 rm -rf ./*.log
 rm -rf ./time_result.txt
-MASTER="localhost"
-PORT=80
+MASTER="140.114.84.204"
+PORT1=8134
+PORT2=22
 
 #usage(){
 #  echo "Creates a worker and connects it to a master.";
@@ -31,12 +32,7 @@ PORT=80
 #  exit 1;
 #fi;
 
-
-if [ "$MASTER" == "localhost" ] ; then
-  # start a local master
-  python3 ./kaldi-gstreamer-server/kaldigstserver/master_server_example.py --port=$PORT 2>> ./master.log &
-  #python3 ./kaldi-gstreamer-server/kaldigstserver/master_server_example.py >> ./master.log &
-fi
+python3 ./kaldi-gstreamer-server/kaldigstserver/master_server_example.py --port=$PORT2 2>> ./master.log &
 
 #start worker and connect it to the master
 #export GST_PLUGIN_PATH=/opt/gst-kaldi-nnet2-online/src/:/opt/kaldi/src/gst-plugin/
@@ -44,5 +40,5 @@ fi
 for (( i=1; i<=1; i++ ))
 do
    log_name="worker$i"
-   python ./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py -u ws://$MASTER:$PORT/worker/ws/speech 2>> ./$log_name.log &
+   python ./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py -u ws://$MASTER:$PORT1/worker/ws/speech 2>> ./$log_name.log &
 done

@@ -1,13 +1,15 @@
-   DEBUG 2020-11-23 23:02:06,211 Starting up server 
-Traceback (most recent call last):
-  File "./kaldi-gstreamer-server/kaldigstserver/master_server_example.py", line 344, in <module>
-    main()
-  File "./kaldi-gstreamer-server/kaldigstserver/master_server_example.py", line 339, in main
-    app.listen(options.port)
-  File "/home/biic/anaconda3/lib/python3.8/site-packages/tornado/web.py", line 2116, in listen
-    server.listen(port, address)
-  File "/home/biic/anaconda3/lib/python3.8/site-packages/tornado/tcpserver.py", line 151, in listen
-    sockets = bind_sockets(port, address=address)
-  File "/home/biic/anaconda3/lib/python3.8/site-packages/tornado/netutil.py", line 174, in bind_sockets
-    sock.bind(sockaddr)
-PermissionError: [Errno 13] Permission denied
+   DEBUG 2020-11-24 07:56:57,181 Starting up server 
+    INFO 2020-11-24 07:56:59,276 101 GET /worker/ws/speech (172.17.0.1) 1.13ms 
+    INFO 2020-11-24 07:56:59,277 New worker available <__main__.WorkerSocketHandler object at 0x7f46e894ad30> 
+    INFO 2020-11-24 07:57:08,902 101 GET /client/ws/speech?content-type= (140.114.27.236) 0.97ms 
+    INFO 2020-11-24 07:57:08,902 69698f84-f3fb-45e9-8f09-3339617bc921: OPEN 
+    INFO 2020-11-24 07:57:08,902 69698f84-f3fb-45e9-8f09-3339617bc921: Request arguments: content-type="" 
+    INFO 2020-11-24 07:57:08,902 69698f84-f3fb-45e9-8f09-3339617bc921: Using worker <__main__.DecoderSocketHandler object at 0x7f46e88e1320> 
+    INFO 2020-11-24 07:57:08,918 69698f84-f3fb-45e9-8f09-3339617bc921: Forwarding client message (<class 'str'>) of length 3 to worker 
+    INFO 2020-11-24 07:57:08,954 69698f84-f3fb-45e9-8f09-3339617bc921: Sending event {'status': 0, 'adaptation_state': {'id': '69698f84-f3fb-45e9-8f09-3339617bc921', 'segment': 0, 'result': {'hypotheses': [{'transcript': 'received EOS, stop'}], 'final': True}, 'time': '2020-11-24T07:57:08'}, 'id': '69698f84-f3fb-45e9-8f09-3339617bc921'} to client 
+    INFO 2020-11-24 07:57:08,955 Worker <__main__.WorkerSocketHandler object at 0x7f46e894ad30> leaving 
+    INFO 2020-11-24 07:57:08,955 Closing client connection 
+    INFO 2020-11-24 07:57:09,020 69698f84-f3fb-45e9-8f09-3339617bc921: Handling on_connection_close() 
+    INFO 2020-11-24 07:57:09,020 69698f84-f3fb-45e9-8f09-3339617bc921: Closing worker connection 
+    INFO 2020-11-24 07:57:10,180 101 GET /worker/ws/speech (172.17.0.1) 0.82ms 
+    INFO 2020-11-24 07:57:10,180 New worker available <__main__.WorkerSocketHandler object at 0x7f46e88e1630> 

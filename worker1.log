@@ -1,4 +1,47 @@
-Traceback (most recent call last):
-  File "./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py", line 24, in <module>
-    import tensorflow as tf
-ModuleNotFoundError: No module named 'tensorflow'
+Using TensorFlow backend.
+WARNING:tensorflow:From ./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py:59: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From ./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py:62: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-11-24 07:56:58.172705: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-11-24 07:56:58.197958: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3000000000 Hz
+2020-11-24 07:56:58.200236: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4e83260 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-24 07:56:58.200275: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-11-24 07:56:58.203195: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-11-24 07:56:58.203235: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (-1)
+2020-11-24 07:56:58.203260: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: 714b81608dc6
+2020-11-24 07:56:58.203271: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: 714b81608dc6
+2020-11-24 07:56:58.203399: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: Not found: was unable to find libcuda.so DSO loaded into this program
+2020-11-24 07:56:58.203442: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 455.23.5
+WARNING:tensorflow:From ./kaldi-gstreamer-server/kaldigstserver/worker_example_2.py:63: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+   DEBUG 2020-11-24 07:56:58,206 Starting up worker 
+   DEBUG 2020-11-24 07:56:58,208 Using selector: EpollSelector 
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+ WARNING 2020-11-24 07:56:58,260 From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers. 
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+ WARNING 2020-11-24 07:56:58,423 From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+ 
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+ WARNING 2020-11-24 07:56:59,092 From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+ 
+    INFO 2020-11-24 07:56:59,272 Opening websocket connection to master server 
+    INFO 2020-11-24 07:56:59,277 Opened websocket connection to server 
+   DEBUG 2020-11-24 07:57:08,904 <undefined>: Got message from server of type <class 'str'> 
+    INFO 2020-11-24 07:57:08,910 69698f84-f3fb-45e9-8f09-3339617bc921: Started timeout guard 
+    INFO 2020-11-24 07:57:08,915 69698f84-f3fb-45e9-8f09-3339617bc921: Initialized request 
+   DEBUG 2020-11-24 07:57:08,947 69698f84-f3fb-45e9-8f09-3339617bc921: Got message from server of type <class 'str'> 
+   DEBUG 2020-11-24 07:57:08,953 Using selector: EpollSelector 
+   DEBUG 2020-11-24 07:57:08,956 69698f84-f3fb-45e9-8f09-3339617bc921: Got message from server of type <class 'NoneType'> 
+    INFO 2020-11-24 07:57:08,956 69698f84-f3fb-45e9-8f09-3339617bc921: Ignoring data, worker already in state 100 
+   DEBUG 2020-11-24 07:57:08,956 69698f84-f3fb-45e9-8f09-3339617bc921: Websocket closed() called 
+   DEBUG 2020-11-24 07:57:08,956 69698f84-f3fb-45e9-8f09-3339617bc921: Websocket closed() finished 
+    INFO 2020-11-24 07:57:08,956 Finished decoding run 
+    INFO 2020-11-24 07:57:10,177 Opening websocket connection to master server 
+    INFO 2020-11-24 07:57:10,181 Opened websocket connection to server 

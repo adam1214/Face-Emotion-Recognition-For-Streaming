@@ -415,7 +415,8 @@ def main():
     logging.basicConfig(level=logging.DEBUG, format="%(levelname)8s %(asctime)s %(message)s ")
     logging.debug('Starting up worker')
     parser = argparse.ArgumentParser(description='Worker for kaldigstserver')
-    parser.add_argument('-u', '--uri', default="ws://localhost:8888/worker/ws/speech", dest="uri", help="Server<-->worker websocket URI")
+    #parser.add_argument('-u', '--uri', default="ws://localhost:8888/worker/ws/speech", dest="uri", help="Server<-->worker websocket URI")
+    parser.add_argument('-u', '--uri', default="ws://140.114.84.204:8134/worker/ws/speech", dest="uri", help="Server<-->worker websocket URI")
     parser.add_argument('-f', '--fork', default=1, dest="fork", type=int)
 
     args = parser.parse_args()

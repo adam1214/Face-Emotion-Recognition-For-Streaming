@@ -24,7 +24,7 @@ import tornado.websocket
 import tornado.gen
 import tornado.concurrent
 # import concurrent.futures
-import settings
+# import settings
 import common
 
 
@@ -322,7 +322,7 @@ def main():
     logging.basicConfig(level=logging.DEBUG, format="%(levelname)8s %(asctime)s %(message)s ")
     logging.debug('Starting up server')
     from tornado.options import define, options
-    # define("port",default=80,help="run on the given port",type=int)
+    define("port",default=22,help="run on the given port",type=int)
     define("certfile", default="", help="certificate file for secured SSL connection")
     define("keyfile", default="", help="key file for secured SSL connection")
 
