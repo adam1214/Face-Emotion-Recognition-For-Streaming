@@ -82,17 +82,42 @@
     
         `python kaldi-gstreamer-server/kaldigstserver/client_example.py -u ws://localhost:5000/client/ws/speech -v False -info False ./example_wav/Test.mp4`
         
-## Pressure test on 140.114.84.204 (Localhost) (Edited by Chun Yu Chen)
+## Master-Worker pressure test on 140.114.84.204 (Edited by Chun Yu Chen)
 *    Code explain
         *    allocate_client.sh：How many clients you want to allocate. (for loop)
         *    start.sh：How many workers you want to allocate.(for loop)
         *    avg_sec.py：Estimate average time of all seconds that workers spent.
 
 *    Pressure test result
-        *    1 worker：8.64s
-        *    2 worker：8.19s
-        *    3 worker：8.09s
-        *    4 worker：8.29s
-        *    5 worker：8.72s
-        *    10 worker：14.37s
-        *    15 worker：21.58s
+        *   localhost (ubuntu) (5 sec, 1080p resize to 720p)
+            *    1 worker：8.64s
+            *    2 worker：8.19s
+            *    3 worker：8.09s
+            *    4 worker：8.29s
+            *    5 worker：8.72s
+            *    10 worker：14.37s
+            *    15 worker：21.58s
+        *   non-localhost by vpn (ubuntu Virtual Machine) (5 sec, 1080p resize to 720p)
+            *   1 worker：11.63s
+            *   2 worker：26.21s
+            *   3 worker：40.19s
+            *   4 worker：53.92s
+            *   5 worker：65.15s (Maximum difference:10s)
+            *   10 worker：146.47s (Maximum difference:20s)
+            *   15 worker：237.43s (Maximum difference:47s)
+        *   non-localhost by 713 PC (ubuntu) (5 sec, 1080p resize to 720p)
+            *   1 worker：8.31
+            *   2 worker：8.97
+            *   3 worker：9.58
+            *   4 worker：10.19
+            *   5 worker：10.55
+            *   10 worker：16.44
+            *   15 worker：23.97
+        *   non-localhost by 713 PC (ubuntu) (5 sec, 1080p resize to 480p)
+            *   1 worker：6.68
+            *   2 worker：6.80
+            *   3 worker：6.78
+            *   4 worker：6.93
+            *   5 worker：7.44
+            *   10 worker：11.21
+            *   15 worker：15.12
