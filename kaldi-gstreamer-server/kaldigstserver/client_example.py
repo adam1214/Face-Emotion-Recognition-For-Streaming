@@ -48,7 +48,7 @@ class MyClient():
         self.final_hyps = []
         self.global_img_box = []
         # self.audiofile = audiofile
-        if audiofile == '-1':
+        if audiofile == '-1' or audiofile == '0':
             self.audiofile = cv2.VideoCapture(int(audiofile))
         else:
             self.audiofile = cv2.VideoCapture(audiofile)
@@ -100,8 +100,8 @@ class MyClient():
                 connect_flag = False
                 break
             
-            frame = cv2.resize(frame,(1280,720),fx=0,fy=0, interpolation = cv2.INTER_CUBIC)
-            # frame = cv2.resize(frame,(640,480),fx=0,fy=0, interpolation = cv2.INTER_CUBIC)
+            # frame = cv2.resize(frame,(1280,720),fx=0,fy=0, interpolation = cv2.INTER_CUBIC)
+            frame = cv2.resize(frame,(640,480),fx=0,fy=0, interpolation = cv2.INTER_CUBIC)
             self.global_img_box.append(frame)
             
             
