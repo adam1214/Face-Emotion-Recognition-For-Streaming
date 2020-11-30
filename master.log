@@ -1,15 +1,744 @@
-   DEBUG 2020-11-24 07:56:57,181 Starting up server 
-    INFO 2020-11-24 07:56:59,276 101 GET /worker/ws/speech (172.17.0.1) 1.13ms 
-    INFO 2020-11-24 07:56:59,277 New worker available <__main__.WorkerSocketHandler object at 0x7f46e894ad30> 
-    INFO 2020-11-24 07:57:08,902 101 GET /client/ws/speech?content-type= (140.114.27.236) 0.97ms 
-    INFO 2020-11-24 07:57:08,902 69698f84-f3fb-45e9-8f09-3339617bc921: OPEN 
-    INFO 2020-11-24 07:57:08,902 69698f84-f3fb-45e9-8f09-3339617bc921: Request arguments: content-type="" 
-    INFO 2020-11-24 07:57:08,902 69698f84-f3fb-45e9-8f09-3339617bc921: Using worker <__main__.DecoderSocketHandler object at 0x7f46e88e1320> 
-    INFO 2020-11-24 07:57:08,918 69698f84-f3fb-45e9-8f09-3339617bc921: Forwarding client message (<class 'str'>) of length 3 to worker 
-    INFO 2020-11-24 07:57:08,954 69698f84-f3fb-45e9-8f09-3339617bc921: Sending event {'status': 0, 'adaptation_state': {'id': '69698f84-f3fb-45e9-8f09-3339617bc921', 'segment': 0, 'result': {'hypotheses': [{'transcript': 'received EOS, stop'}], 'final': True}, 'time': '2020-11-24T07:57:08'}, 'id': '69698f84-f3fb-45e9-8f09-3339617bc921'} to client 
-    INFO 2020-11-24 07:57:08,955 Worker <__main__.WorkerSocketHandler object at 0x7f46e894ad30> leaving 
-    INFO 2020-11-24 07:57:08,955 Closing client connection 
-    INFO 2020-11-24 07:57:09,020 69698f84-f3fb-45e9-8f09-3339617bc921: Handling on_connection_close() 
-    INFO 2020-11-24 07:57:09,020 69698f84-f3fb-45e9-8f09-3339617bc921: Closing worker connection 
-    INFO 2020-11-24 07:57:10,180 101 GET /worker/ws/speech (172.17.0.1) 0.82ms 
-    INFO 2020-11-24 07:57:10,180 New worker available <__main__.WorkerSocketHandler object at 0x7f46e88e1630> 
+   DEBUG 2020-11-30 16:11:43,834 Starting up server 
+    INFO 2020-11-30 16:11:46,033 101 GET /worker/ws/speech (172.17.0.1) 1.16ms 
+    INFO 2020-11-30 16:11:46,033 New worker available <__main__.WorkerSocketHandler object at 0x7f5115924d30> 
+    INFO 2020-11-30 16:12:51,031 101 GET /client/ws/speech?content-type= (1.161.214.121) 0.97ms 
+    INFO 2020-11-30 16:12:51,032 767736ae-40c0-42d9-92ed-9096b38a6a63: OPEN 
+    INFO 2020-11-30 16:12:51,032 767736ae-40c0-42d9-92ed-9096b38a6a63: Request arguments: content-type="" 
+    INFO 2020-11-30 16:12:51,032 767736ae-40c0-42d9-92ed-9096b38a6a63: Using worker <__main__.DecoderSocketHandler object at 0x7f51158bc3c8> 
+    INFO 2020-11-30 16:12:51,133 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36508 to worker 
+    INFO 2020-11-30 16:12:51,146 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36508 to worker 
+    INFO 2020-11-30 16:12:51,155 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36508 to worker 
+    INFO 2020-11-30 16:12:51,165 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:51,171 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32682 to worker 
+    INFO 2020-11-30 16:12:51,178 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32682 to worker 
+    INFO 2020-11-30 16:12:51,194 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32682 to worker 
+    INFO 2020-11-30 16:12:51,216 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32376 to worker 
+    INFO 2020-11-30 16:12:51,222 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32376 to worker 
+    INFO 2020-11-30 16:12:51,239 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32376 to worker 
+    INFO 2020-11-30 16:12:51,260 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33537 to worker 
+    INFO 2020-11-30 16:12:51,261 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 0}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,267 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33537 to worker 
+    INFO 2020-11-30 16:12:51,273 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33537 to worker 
+    INFO 2020-11-30 16:12:51,273 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:51,302 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32003 to worker 
+    INFO 2020-11-30 16:12:51,304 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 1}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,307 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32003 to worker 
+    INFO 2020-11-30 16:12:51,316 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32003 to worker 
+    INFO 2020-11-30 16:12:51,335 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32069 to worker 
+    INFO 2020-11-30 16:12:51,336 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 2}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,341 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32069 to worker 
+    INFO 2020-11-30 16:12:51,348 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32069 to worker 
+    INFO 2020-11-30 16:12:51,367 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33367 to worker 
+    INFO 2020-11-30 16:12:51,367 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.009814337827265263, 7.224202272482216e-05, 0.006731383036822081, 0.0003339080431032926, 0.0576169416308403, 0.000826249539386481, 0.9246049523353577]], 'face': [475, 116, 430, 430]}], 'final': False, 'count': 3}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,373 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33367 to worker 
+    INFO 2020-11-30 16:12:51,380 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33367 to worker 
+    INFO 2020-11-30 16:12:51,381 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:51,407 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32046 to worker 
+    INFO 2020-11-30 16:12:51,414 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32046 to worker 
+    INFO 2020-11-30 16:12:51,415 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.010425041429698467, 3.647158155217767e-05, 0.004738334566354752, 0.00014147948240861297, 0.03622962161898613, 0.0010322888847440481, 0.9473967552185059]], 'face': [479, 118, 430, 430]}], 'final': False, 'count': 4}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,424 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32046 to worker 
+    INFO 2020-11-30 16:12:51,445 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32143 to worker 
+    INFO 2020-11-30 16:12:51,452 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32143 to worker 
+    INFO 2020-11-30 16:12:51,470 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32143 to worker 
+    INFO 2020-11-30 16:12:51,472 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.008010754361748695, 6.472505629062653e-05, 0.0030520728323608637, 0.00011624662147369236, 0.01781974919140339, 0.000664858496747911, 0.9702715873718262]], 'face': [500, 127, 397, 397]}], 'final': False, 'count': 5}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,478 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:51,506 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33470 to worker 
+    INFO 2020-11-30 16:12:51,508 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.01276695728302002, 3.125466901110485e-05, 0.005876828450709581, 0.0001120981978601776, 0.03193278610706329, 0.0010689132614061236, 0.9482111930847168]], 'face': [496, 125, 405, 405]}], 'final': False, 'count': 6}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,513 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33470 to worker 
+    INFO 2020-11-30 16:12:51,519 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33470 to worker 
+    INFO 2020-11-30 16:12:51,520 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:51,549 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32915 to worker 
+    INFO 2020-11-30 16:12:51,550 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.007188208866864443, 2.5979834390454926e-05, 0.0032189274206757545, 0.00022526137763634324, 0.019140681251883507, 0.0007222249987535179, 0.9694786667823792]], 'face': [489, 124, 408, 408]}], 'final': False, 'count': 7}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,555 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32915 to worker 
+    INFO 2020-11-30 16:12:51,572 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32915 to worker 
+    INFO 2020-11-30 16:12:51,573 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:51,589 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32998 to worker 
+    INFO 2020-11-30 16:12:51,590 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.014752437360584736, 8.176920528057963e-05, 0.008237945847213268, 0.00020879841758869588, 0.06567954272031784, 0.0007837336743250489, 0.9102557897567749]], 'face': [478, 116, 430, 430]}], 'final': False, 'count': 8}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,595 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32998 to worker 
+    INFO 2020-11-30 16:12:51,609 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32998 to worker 
+    INFO 2020-11-30 16:12:51,629 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34137 to worker 
+    INFO 2020-11-30 16:12:51,631 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 9}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,636 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34137 to worker 
+    INFO 2020-11-30 16:12:51,643 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34137 to worker 
+    INFO 2020-11-30 16:12:51,643 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:51,675 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33290 to worker 
+    INFO 2020-11-30 16:12:51,676 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 10}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,682 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33290 to worker 
+    INFO 2020-11-30 16:12:51,689 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33290 to worker 
+    INFO 2020-11-30 16:12:51,689 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:51,690 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 11}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,715 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33416 to worker 
+    INFO 2020-11-30 16:12:51,721 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33416 to worker 
+    INFO 2020-11-30 16:12:51,734 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33416 to worker 
+    INFO 2020-11-30 16:12:51,736 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.02016863040626049, 0.00018038853886537254, 0.01723087765276432, 0.001110635930672288, 0.05462319776415825, 0.0031848668586462736, 0.9035014510154724]], 'face': [475, 114, 430, 430]}], 'final': False, 'count': 12}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,743 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:51,770 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33991 to worker 
+    INFO 2020-11-30 16:12:51,771 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 13}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,776 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33991 to worker 
+    INFO 2020-11-30 16:12:51,783 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33991 to worker 
+    INFO 2020-11-30 16:12:51,800 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33364 to worker 
+    INFO 2020-11-30 16:12:51,802 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 14}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,807 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33364 to worker 
+    INFO 2020-11-30 16:12:51,813 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33364 to worker 
+    INFO 2020-11-30 16:12:51,833 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33223 to worker 
+    INFO 2020-11-30 16:12:51,835 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 15}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,839 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33223 to worker 
+    INFO 2020-11-30 16:12:51,853 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33223 to worker 
+    INFO 2020-11-30 16:12:51,890 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:51,897 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33845 to worker 
+    INFO 2020-11-30 16:12:51,901 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 16}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,903 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33845 to worker 
+    INFO 2020-11-30 16:12:51,910 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33845 to worker 
+    INFO 2020-11-30 16:12:51,914 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:51,942 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33359 to worker 
+    INFO 2020-11-30 16:12:51,948 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33359 to worker 
+    INFO 2020-11-30 16:12:51,955 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33359 to worker 
+    INFO 2020-11-30 16:12:51,979 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33330 to worker 
+    INFO 2020-11-30 16:12:51,980 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 17}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:51,981 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33330 to worker 
+    INFO 2020-11-30 16:12:51,999 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33330 to worker 
+    INFO 2020-11-30 16:12:52,022 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34016 to worker 
+    INFO 2020-11-30 16:12:52,024 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 18}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,029 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34016 to worker 
+    INFO 2020-11-30 16:12:52,043 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34016 to worker 
+    INFO 2020-11-30 16:12:52,044 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 19}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,052 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:52,082 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33430 to worker 
+    INFO 2020-11-30 16:12:52,084 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 20}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,091 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33430 to worker 
+    INFO 2020-11-30 16:12:52,096 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33430 to worker 
+    INFO 2020-11-30 16:12:52,096 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:52,124 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33395 to worker 
+    INFO 2020-11-30 16:12:52,126 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 21}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,128 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33395 to worker 
+    INFO 2020-11-30 16:12:52,138 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33395 to worker 
+    INFO 2020-11-30 16:12:52,138 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:52,139 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 22}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,165 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34201 to worker 
+    INFO 2020-11-30 16:12:52,172 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34201 to worker 
+    INFO 2020-11-30 16:12:52,185 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34201 to worker 
+    INFO 2020-11-30 16:12:52,205 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33504 to worker 
+    INFO 2020-11-30 16:12:52,211 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33504 to worker 
+    INFO 2020-11-30 16:12:52,218 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33504 to worker 
+    INFO 2020-11-30 16:12:52,224 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:52,238 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.003248693188652396, 5.2315794164314866e-05, 0.05210011079907417, 0.000497726199682802, 0.003975992556661367, 0.9350104331970215, 0.005114746745675802]], 'face': [474, 88, 452, 452]}], 'final': False, 'count': 23}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,251 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33444 to worker 
+    INFO 2020-11-30 16:12:52,265 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33444 to worker 
+    INFO 2020-11-30 16:12:52,266 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33444 to worker 
+    INFO 2020-11-30 16:12:52,274 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:52,275 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 24}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,298 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34247 to worker 
+    INFO 2020-11-30 16:12:52,304 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34247 to worker 
+    INFO 2020-11-30 16:12:52,311 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34247 to worker 
+    INFO 2020-11-30 16:12:52,312 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 25}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,329 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33233 to worker 
+    INFO 2020-11-30 16:12:52,335 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33233 to worker 
+    INFO 2020-11-30 16:12:52,342 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33233 to worker 
+    INFO 2020-11-30 16:12:52,348 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:52,349 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 26}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,378 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34202 to worker 
+    INFO 2020-11-30 16:12:52,380 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 27}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,385 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34202 to worker 
+    INFO 2020-11-30 16:12:52,398 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34202 to worker 
+    INFO 2020-11-30 16:12:52,433 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:52,440 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36742 to worker 
+    INFO 2020-11-30 16:12:52,447 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36742 to worker 
+    INFO 2020-11-30 16:12:52,463 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36742 to worker 
+    INFO 2020-11-30 16:12:52,471 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:52,482 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 28}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,508 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33814 to worker 
+    INFO 2020-11-30 16:12:52,516 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33814 to worker 
+    INFO 2020-11-30 16:12:52,520 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33814 to worker 
+    INFO 2020-11-30 16:12:52,523 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:52,545 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33626 to worker 
+    INFO 2020-11-30 16:12:52,547 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.003908555023372173, 0.00017924353596754372, 0.026011141017079353, 0.0001001251075649634, 0.003391884034499526, 0.9635441899299622, 0.0028648239094763994]], 'face': [489, 95, 420, 420]}], 'final': False, 'count': 29}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,551 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33626 to worker 
+    INFO 2020-11-30 16:12:52,558 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33626 to worker 
+    INFO 2020-11-30 16:12:52,559 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:52,588 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34243 to worker 
+    INFO 2020-11-30 16:12:52,591 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0017774717416614294, 0.0003167859395034611, 0.017916502431035042, 5.211848838371225e-05, 0.00134439452085644, 0.9765249490737915, 0.002067757537588477]], 'face': [500, 104, 397, 397]}], 'final': False, 'count': 30}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,595 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34243 to worker 
+    INFO 2020-11-30 16:12:52,603 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34243 to worker 
+    INFO 2020-11-30 16:12:52,612 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:52,613 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 31}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,631 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33462 to worker 
+    INFO 2020-11-30 16:12:52,638 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33462 to worker 
+    INFO 2020-11-30 16:12:52,650 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33462 to worker 
+    INFO 2020-11-30 16:12:52,651 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 32}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,661 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:52,686 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33482 to worker 
+    INFO 2020-11-30 16:12:52,687 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 33}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,694 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33482 to worker 
+    INFO 2020-11-30 16:12:52,706 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33482 to worker 
+    INFO 2020-11-30 16:12:52,718 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:52,719 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0044994354248046875, 0.0014915522187948227, 0.020054077729582787, 9.761127876117826e-05, 0.0037829293869435787, 0.9635372161865234, 0.006537153851240873]], 'face': [494, 107, 397, 397]}], 'final': False, 'count': 34}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,750 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34261 to worker 
+    INFO 2020-11-30 16:12:52,759 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34261 to worker 
+    INFO 2020-11-30 16:12:52,760 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 35}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,767 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34261 to worker 
+    INFO 2020-11-30 16:12:52,776 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:52,811 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33453 to worker 
+    INFO 2020-11-30 16:12:52,818 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33453 to worker 
+    INFO 2020-11-30 16:12:52,822 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33453 to worker 
+    INFO 2020-11-30 16:12:52,828 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:52,850 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33511 to worker 
+    INFO 2020-11-30 16:12:52,857 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33511 to worker 
+    INFO 2020-11-30 16:12:52,861 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33511 to worker 
+    INFO 2020-11-30 16:12:52,864 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:52,884 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34252 to worker 
+    INFO 2020-11-30 16:12:52,891 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34252 to worker 
+    INFO 2020-11-30 16:12:52,892 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 36}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,898 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34252 to worker 
+    INFO 2020-11-30 16:12:52,903 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:52,933 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33604 to worker 
+    INFO 2020-11-30 16:12:52,934 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 37}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,940 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33604 to worker 
+    INFO 2020-11-30 16:12:52,954 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33604 to worker 
+    INFO 2020-11-30 16:12:52,965 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:52,991 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33643 to worker 
+    INFO 2020-11-30 16:12:52,993 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.010497596114873886, 0.0003361868148203939, 0.09568896144628525, 0.0015445816097781062, 0.07689924538135529, 0.769188642501831, 0.04584486037492752]], 'face': [460, 77, 473, 473]}], 'final': False, 'count': 38}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:52,998 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33643 to worker 
+    INFO 2020-11-30 16:12:53,005 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33643 to worker 
+    INFO 2020-11-30 16:12:53,005 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:53,032 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34234 to worker 
+    INFO 2020-11-30 16:12:53,034 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.007457389030605555, 7.412431295961142e-05, 0.034006088972091675, 0.0007430422701872885, 0.01253710500895977, 0.9317848086357117, 0.013397523202002048]], 'face': [477, 86, 450, 450]}], 'final': False, 'count': 39}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,039 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34234 to worker 
+    INFO 2020-11-30 16:12:53,049 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34234 to worker 
+    INFO 2020-11-30 16:12:53,049 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:53,079 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33616 to worker 
+    INFO 2020-11-30 16:12:53,081 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33616 to worker 
+    INFO 2020-11-30 16:12:53,081 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.006811887491494417, 0.0003622462972998619, 0.03470611944794655, 0.00016394861449953169, 0.006314844824373722, 0.9428381323814392, 0.008802750147879124]], 'face': [492, 93, 435, 435]}], 'final': False, 'count': 40}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,095 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33616 to worker 
+    INFO 2020-11-30 16:12:53,099 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:53,120 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33568 to worker 
+    INFO 2020-11-30 16:12:53,122 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.005724673625081778, 0.0001691873767413199, 0.08331180363893509, 0.0008489983738400042, 0.046810977160930634, 0.8449465036392212, 0.018187835812568665]], 'face': [466, 77, 473, 473]}], 'final': False, 'count': 41}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,127 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33568 to worker 
+    INFO 2020-11-30 16:12:53,142 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33568 to worker 
+    INFO 2020-11-30 16:12:53,168 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34194 to worker 
+    INFO 2020-11-30 16:12:53,168 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34194 to worker 
+    INFO 2020-11-30 16:12:53,170 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.009086444973945618, 0.00022736776736564934, 0.05741850286722183, 0.0008330853888764977, 0.005582628771662712, 0.917762815952301, 0.00908918771892786]], 'face': [483, 87, 439, 439]}], 'final': False, 'count': 42}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,175 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34194 to worker 
+    INFO 2020-11-30 16:12:53,178 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:53,179 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 43}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,211 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33547 to worker 
+    INFO 2020-11-30 16:12:53,212 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 44}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,217 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33547 to worker 
+    INFO 2020-11-30 16:12:53,225 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33547 to worker 
+    INFO 2020-11-30 16:12:53,227 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:53,254 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33492 to worker 
+    INFO 2020-11-30 16:12:53,255 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.008532125502824783, 0.00013082016084808856, 0.06385928392410278, 0.0011959202820435166, 0.009241347201168537, 0.9008914828300476, 0.016149060800671577]], 'face': [476, 90, 448, 448]}], 'final': False, 'count': 45}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,261 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33492 to worker 
+    INFO 2020-11-30 16:12:53,274 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33492 to worker 
+    INFO 2020-11-30 16:12:53,288 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:53,316 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34277 to worker 
+    INFO 2020-11-30 16:12:53,318 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.014253489673137665, 0.0013531886506825686, 0.05205126106739044, 0.0005356338224373758, 0.018927009776234627, 0.8829724192619324, 0.02990696392953396]], 'face': [480, 94, 434, 434]}], 'final': False, 'count': 46}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,323 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34277 to worker 
+    INFO 2020-11-30 16:12:53,330 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34277 to worker 
+    INFO 2020-11-30 16:12:53,330 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:53,356 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33445 to worker 
+    INFO 2020-11-30 16:12:53,357 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.007278048899024725, 0.0001219553014379926, 0.1550103724002838, 0.0015900927828624845, 0.06418875604867935, 0.7373299598693848, 0.034480851143598557]], 'face': [468, 79, 467, 467]}], 'final': False, 'count': 47}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,363 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33445 to worker 
+    INFO 2020-11-30 16:12:53,373 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33445 to worker 
+    INFO 2020-11-30 16:12:53,393 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33373 to worker 
+    INFO 2020-11-30 16:12:53,394 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.01499953679740429, 0.0004180008254479617, 0.12374477088451385, 0.005222741048783064, 0.09194047749042511, 0.6897047162055969, 0.0739697813987732]], 'face': [468, 80, 462, 462]}], 'final': False, 'count': 48}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,400 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33373 to worker 
+    INFO 2020-11-30 16:12:53,406 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33373 to worker 
+    INFO 2020-11-30 16:12:53,407 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:53,432 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34134 to worker 
+    INFO 2020-11-30 16:12:53,434 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 49}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,439 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34134 to worker 
+    INFO 2020-11-30 16:12:53,450 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34134 to worker 
+    INFO 2020-11-30 16:12:53,470 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33250 to worker 
+    INFO 2020-11-30 16:12:53,471 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 50}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,477 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33250 to worker 
+    INFO 2020-11-30 16:12:53,489 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33250 to worker 
+    INFO 2020-11-30 16:12:53,509 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33265 to worker 
+    INFO 2020-11-30 16:12:53,510 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 51}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,515 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33265 to worker 
+    INFO 2020-11-30 16:12:53,526 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33265 to worker 
+    INFO 2020-11-30 16:12:53,550 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34616 to worker 
+    INFO 2020-11-30 16:12:53,552 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0081907007843256, 3.6983503377996385e-05, 0.007053116802126169, 0.20039208233356476, 0.013253861106932163, 0.001578129013068974, 0.7694951295852661]], 'face': [475, 102, 430, 430]}], 'final': False, 'count': 52}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,557 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34616 to worker 
+    INFO 2020-11-30 16:12:53,571 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34616 to worker 
+    INFO 2020-11-30 16:12:53,591 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33285 to worker 
+    INFO 2020-11-30 16:12:53,592 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0044500576332211494, 2.206225326517597e-05, 0.0025476724840700626, 0.20875662565231323, 0.006831658072769642, 0.0003286139399278909, 0.7770633101463318]], 'face': [467, 91, 448, 448]}], 'final': False, 'count': 53}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,597 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33285 to worker 
+    INFO 2020-11-30 16:12:53,605 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33285 to worker 
+    INFO 2020-11-30 16:12:53,624 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33413 to worker 
+    INFO 2020-11-30 16:12:53,626 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0010082912631332874, 4.6793711589998566e-06, 0.000655164651107043, 0.6107089519500732, 0.0016688656760379672, 7.89845798863098e-05, 0.38587504625320435]], 'face': [464, 91, 452, 452]}], 'final': False, 'count': 54}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,631 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33413 to worker 
+    INFO 2020-11-30 16:12:53,645 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33413 to worker 
+    INFO 2020-11-30 16:12:53,681 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:53,687 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34598 to worker 
+    INFO 2020-11-30 16:12:53,694 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34598 to worker 
+    INFO 2020-11-30 16:12:53,701 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34598 to worker 
+    INFO 2020-11-30 16:12:53,706 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:53,729 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0013101602671667933, 1.1530427173056523e-06, 0.0006883442401885986, 0.36162030696868896, 0.0019496632739901543, 3.9289800042752177e-05, 0.6343910694122314]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 55}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,736 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33211 to worker 
+    INFO 2020-11-30 16:12:53,743 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33211 to worker 
+    INFO 2020-11-30 16:12:53,749 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33211 to worker 
+    INFO 2020-11-30 16:12:53,752 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:53,785 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34789 to worker 
+    INFO 2020-11-30 16:12:53,786 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0008030015742406249, 2.4604357804491883e-06, 0.00019261380657553673, 0.8200057744979858, 0.00030978344148024917, 6.475122063420713e-05, 0.17862170934677124]], 'face': [485, 103, 416, 416]}], 'final': False, 'count': 56}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,792 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34789 to worker 
+    INFO 2020-11-30 16:12:53,805 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34789 to worker 
+    INFO 2020-11-30 16:12:53,825 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36172 to worker 
+    INFO 2020-11-30 16:12:53,827 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 57}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,832 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36172 to worker 
+    INFO 2020-11-30 16:12:53,839 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36172 to worker 
+    INFO 2020-11-30 16:12:53,858 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34351 to worker 
+    INFO 2020-11-30 16:12:53,859 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0013564630644395947, 2.7986216082354076e-06, 0.0003797413082793355, 0.8337793946266174, 0.0005674067069776356, 7.844233186915517e-05, 0.16383570432662964]], 'face': [479, 105, 414, 414]}], 'final': False, 'count': 58}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,865 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34351 to worker 
+    INFO 2020-11-30 16:12:53,871 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34351 to worker 
+    INFO 2020-11-30 16:12:53,889 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34274 to worker 
+    INFO 2020-11-30 16:12:53,896 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34274 to worker 
+    INFO 2020-11-30 16:12:53,897 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 59}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,903 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34274 to worker 
+    INFO 2020-11-30 16:12:53,909 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:53,937 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36268 to worker 
+    INFO 2020-11-30 16:12:53,939 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 60}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,944 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36268 to worker 
+    INFO 2020-11-30 16:12:53,952 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36268 to worker 
+    INFO 2020-11-30 16:12:53,952 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:53,980 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33625 to worker 
+    INFO 2020-11-30 16:12:53,982 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 61}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:53,985 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33625 to worker 
+    INFO 2020-11-30 16:12:53,995 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33625 to worker 
+    INFO 2020-11-30 16:12:53,996 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 62}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,017 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33566 to worker 
+    INFO 2020-11-30 16:12:54,023 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33566 to worker 
+    INFO 2020-11-30 16:12:54,025 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 63}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,030 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33566 to worker 
+    INFO 2020-11-30 16:12:54,050 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34744 to worker 
+    INFO 2020-11-30 16:12:54,057 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34744 to worker 
+    INFO 2020-11-30 16:12:54,058 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 64}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,073 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34744 to worker 
+    INFO 2020-11-30 16:12:54,092 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33463 to worker 
+    INFO 2020-11-30 16:12:54,094 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 65}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,099 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33463 to worker 
+    INFO 2020-11-30 16:12:54,106 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33463 to worker 
+    INFO 2020-11-30 16:12:54,106 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:54,132 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33296 to worker 
+    INFO 2020-11-30 16:12:54,133 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 66}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,138 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33296 to worker 
+    INFO 2020-11-30 16:12:54,151 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33296 to worker 
+    INFO 2020-11-30 16:12:54,160 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:54,188 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34686 to worker 
+    INFO 2020-11-30 16:12:54,189 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 67}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,195 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34686 to worker 
+    INFO 2020-11-30 16:12:54,209 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34686 to worker 
+    INFO 2020-11-30 16:12:54,217 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 68}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,220 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:54,248 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33464 to worker 
+    INFO 2020-11-30 16:12:54,254 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33464 to worker 
+    INFO 2020-11-30 16:12:54,261 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33464 to worker 
+    INFO 2020-11-30 16:12:54,280 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33426 to worker 
+    INFO 2020-11-30 16:12:54,287 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33426 to worker 
+    INFO 2020-11-30 16:12:54,294 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33426 to worker 
+    INFO 2020-11-30 16:12:54,312 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34687 to worker 
+    INFO 2020-11-30 16:12:54,314 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 69}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,318 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34687 to worker 
+    INFO 2020-11-30 16:12:54,325 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34687 to worker 
+    INFO 2020-11-30 16:12:54,326 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:54,352 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33347 to worker 
+    INFO 2020-11-30 16:12:54,354 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 70}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,359 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33347 to worker 
+    INFO 2020-11-30 16:12:54,371 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33347 to worker 
+    INFO 2020-11-30 16:12:54,371 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:54,372 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.04769112542271614, 0.0014745312510058284, 0.13728001713752747, 0.07670409977436066, 0.4713355302810669, 0.005459047853946686, 0.26005566120147705]], 'face': [462, 266, 89, 89]}], 'final': False, 'count': 71}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,392 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33333 to worker 
+    INFO 2020-11-30 16:12:54,399 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33333 to worker 
+    INFO 2020-11-30 16:12:54,417 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33333 to worker 
+    INFO 2020-11-30 16:12:54,418 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 72}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,424 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:54,455 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34692 to worker 
+    INFO 2020-11-30 16:12:54,457 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 73}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,462 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34692 to worker 
+    INFO 2020-11-30 16:12:54,476 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34692 to worker 
+    INFO 2020-11-30 16:12:54,495 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33382 to worker 
+    INFO 2020-11-30 16:12:54,502 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33382 to worker 
+    INFO 2020-11-30 16:12:54,509 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33382 to worker 
+    INFO 2020-11-30 16:12:54,517 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:54,524 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 74}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,545 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33418 to worker 
+    INFO 2020-11-30 16:12:54,552 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33418 to worker 
+    INFO 2020-11-30 16:12:54,571 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33418 to worker 
+    INFO 2020-11-30 16:12:54,572 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 75}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,585 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:54,607 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34724 to worker 
+    INFO 2020-11-30 16:12:54,608 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 76}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,615 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34724 to worker 
+    INFO 2020-11-30 16:12:54,620 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34724 to worker 
+    INFO 2020-11-30 16:12:54,638 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33419 to worker 
+    INFO 2020-11-30 16:12:54,639 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 77}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,645 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33419 to worker 
+    INFO 2020-11-30 16:12:54,651 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33419 to worker 
+    INFO 2020-11-30 16:12:54,669 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33469 to worker 
+    INFO 2020-11-30 16:12:54,671 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 78}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,676 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33469 to worker 
+    INFO 2020-11-30 16:12:54,683 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33469 to worker 
+    INFO 2020-11-30 16:12:54,683 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:54,709 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34647 to worker 
+    INFO 2020-11-30 16:12:54,710 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 79}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,716 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34647 to worker 
+    INFO 2020-11-30 16:12:54,729 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34647 to worker 
+    INFO 2020-11-30 16:12:54,750 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33390 to worker 
+    INFO 2020-11-30 16:12:54,752 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0019114777678623796, 7.519665359723149e-06, 0.0008129833731800318, 0.6848984360694885, 0.001265148282982409, 9.649371349951252e-05, 0.31100794672966003]], 'face': [482, 105, 414, 414]}], 'final': False, 'count': 80}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,757 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33390 to worker 
+    INFO 2020-11-30 16:12:54,764 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33390 to worker 
+    INFO 2020-11-30 16:12:54,780 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33316 to worker 
+    INFO 2020-11-30 16:12:54,782 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 81}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,787 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33316 to worker 
+    INFO 2020-11-30 16:12:54,800 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33316 to worker 
+    INFO 2020-11-30 16:12:54,814 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:54,847 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34545 to worker 
+    INFO 2020-11-30 16:12:54,854 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34545 to worker 
+    INFO 2020-11-30 16:12:54,862 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 82}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,870 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34545 to worker 
+    INFO 2020-11-30 16:12:54,875 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:54,900 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33234 to worker 
+    INFO 2020-11-30 16:12:54,907 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33234 to worker 
+    INFO 2020-11-30 16:12:54,908 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.00797866191715002, 6.704090537823504e-06, 0.004858688451349735, 0.04624180123209953, 0.013317333534359932, 0.00034617111668922007, 0.9272505640983582]], 'face': [488, 108, 416, 416]}], 'final': False, 'count': 83}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,918 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33234 to worker 
+    INFO 2020-11-30 16:12:54,920 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:54,950 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33357 to worker 
+    INFO 2020-11-30 16:12:54,951 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.003667531767860055, 4.965798780176556e-06, 0.006550748832523823, 0.002093376824632287, 0.016639087349176407, 0.0004300781583879143, 0.9706141948699951]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 84}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:54,956 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33357 to worker 
+    INFO 2020-11-30 16:12:54,967 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33357 to worker 
+    INFO 2020-11-30 16:12:54,967 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:54,992 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34562 to worker 
+    INFO 2020-11-30 16:12:55,001 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34562 to worker 
+    INFO 2020-11-30 16:12:55,003 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0027381416875869036, 1.6980416148726363e-06, 0.0025732689537107944, 0.0002852414327207953, 0.015893498435616493, 0.0003152108984068036, 0.978192925453186]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 85}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,006 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34562 to worker 
+    INFO 2020-11-30 16:12:55,016 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:55,042 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33279 to worker 
+    INFO 2020-11-30 16:12:55,049 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33279 to worker 
+    INFO 2020-11-30 16:12:55,050 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.006379665806889534, 2.6968966722051846e-06, 0.0027019092813134193, 0.000254362472333014, 0.02195814624428749, 0.0005422989488579333, 0.9681609272956848]], 'face': [484, 99, 430, 430]}], 'final': False, 'count': 86}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,056 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33279 to worker 
+    INFO 2020-11-30 16:12:55,074 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34497 to worker 
+    INFO 2020-11-30 16:12:55,081 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34497 to worker 
+    INFO 2020-11-30 16:12:55,088 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34497 to worker 
+    INFO 2020-11-30 16:12:55,106 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36673 to worker 
+    INFO 2020-11-30 16:12:55,111 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.006777291186153889, 7.391602593997959e-06, 0.0025687585584819317, 0.0002853254845831543, 0.022345544770359993, 0.0006325545837171376, 0.9673831462860107]], 'face': [484, 99, 430, 430]}], 'final': False, 'count': 87}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,114 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36673 to worker 
+    INFO 2020-11-30 16:12:55,133 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36673 to worker 
+    INFO 2020-11-30 16:12:55,154 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33474 to worker 
+    INFO 2020-11-30 16:12:55,155 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.007169364485889673, 9.681397386884782e-06, 0.002847383264452219, 0.0002706145169213414, 0.02423042431473732, 0.0007101811352185905, 0.9647623896598816]], 'face': [484, 99, 430, 430]}], 'final': False, 'count': 88}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,162 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33474 to worker 
+    INFO 2020-11-30 16:12:55,174 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33474 to worker 
+    INFO 2020-11-30 16:12:55,194 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33421 to worker 
+    INFO 2020-11-30 16:12:55,196 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.009778838604688644, 5.117139608046273e-06, 0.0032721320167183876, 0.00026868528220802546, 0.029682276770472527, 0.000685643928591162, 0.9563072919845581]], 'face': [484, 99, 430, 430]}], 'final': False, 'count': 89}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,203 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33421 to worker 
+    INFO 2020-11-30 16:12:55,208 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33421 to worker 
+    INFO 2020-11-30 16:12:55,208 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:55,236 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34539 to worker 
+    INFO 2020-11-30 16:12:55,238 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.011194949969649315, 5.471241365739843e-06, 0.003819884965196252, 0.00026326318038627505, 0.027595916762948036, 0.0007784772315062582, 0.9563420414924622]], 'face': [484, 99, 430, 430]}], 'final': False, 'count': 90}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,243 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34539 to worker 
+    INFO 2020-11-30 16:12:55,254 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34539 to worker 
+    INFO 2020-11-30 16:12:55,278 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33235 to worker 
+    INFO 2020-11-30 16:12:55,279 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0046492815017700195, 5.372492978494847e-06, 0.002401001751422882, 0.00017137719260063022, 0.03485935553908348, 0.0005488318274728954, 0.9573647379875183]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 91}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,285 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33235 to worker 
+    INFO 2020-11-30 16:12:55,298 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33235 to worker 
+    INFO 2020-11-30 16:12:55,333 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:55,335 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.005223702639341354, 5.913048880756833e-06, 0.0030316414777189493, 0.00019469845574349165, 0.04269024729728699, 0.0005481769912876189, 0.948305606842041]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 92}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,340 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33297 to worker 
+    INFO 2020-11-30 16:12:55,346 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33297 to worker 
+    INFO 2020-11-30 16:12:55,353 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33297 to worker 
+    INFO 2020-11-30 16:12:55,354 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.009701509028673172, 1.76863104570657e-05, 0.004503150004893541, 0.00012098832667106763, 0.0455259345471859, 0.00193816761020571, 0.93819260597229]], 'face': [475, 99, 430, 430]}], 'final': False, 'count': 93}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,357 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:55,384 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34565 to worker 
+    INFO 2020-11-30 16:12:55,391 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34565 to worker 
+    INFO 2020-11-30 16:12:55,392 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.008607671596109867, 1.4944920621928759e-05, 0.0049543981440365314, 0.00012279607472009957, 0.04074893891811371, 0.0019420927856117487, 0.9436091780662537]], 'face': [475, 99, 430, 430]}], 'final': False, 'count': 94}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,398 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34565 to worker 
+    INFO 2020-11-30 16:12:55,407 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:55,431 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33356 to worker 
+    INFO 2020-11-30 16:12:55,438 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33356 to worker 
+    INFO 2020-11-30 16:12:55,440 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.007256730925291777, 7.8050425145193e-06, 0.004166091326624155, 0.0001925137621583417, 0.03419344872236252, 0.0017916085198521614, 0.9523918032646179]], 'face': [475, 99, 430, 430]}], 'final': False, 'count': 95}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,457 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33356 to worker 
+    INFO 2020-11-30 16:12:55,477 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33334 to worker 
+    INFO 2020-11-30 16:12:55,484 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33334 to worker 
+    INFO 2020-11-30 16:12:55,492 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33334 to worker 
+    INFO 2020-11-30 16:12:55,494 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.005329595413058996, 8.46096736495383e-06, 0.0033514846581965685, 0.00012243984383530915, 0.04203799366950989, 0.0008093068609014153, 0.948340654373169]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 96}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,499 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:55,525 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34499 to worker 
+    INFO 2020-11-30 16:12:55,526 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.005152465775609016, 5.151527147972956e-06, 0.002826584968715906, 0.00012522534234449267, 0.02381688915193081, 0.001146076712757349, 0.9669276475906372]], 'face': [475, 99, 430, 430]}], 'final': False, 'count': 97}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,532 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34499 to worker 
+    INFO 2020-11-30 16:12:55,539 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34499 to worker 
+    INFO 2020-11-30 16:12:55,539 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:55,564 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33290 to worker 
+    INFO 2020-11-30 16:12:55,571 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33290 to worker 
+    INFO 2020-11-30 16:12:55,572 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.004895120393484831, 7.906149221525993e-06, 0.002861789194867015, 0.00011729373363777995, 0.028856460005044937, 0.0011674611596390605, 0.9620939493179321]], 'face': [475, 99, 430, 430]}], 'final': False, 'count': 98}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,581 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33290 to worker 
+    INFO 2020-11-30 16:12:55,588 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:55,610 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33371 to worker 
+    INFO 2020-11-30 16:12:55,611 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0049380529671907425, 5.054431767348433e-06, 0.0030492651276290417, 0.00016261296696029603, 0.022741779685020447, 0.0011016856878995895, 0.9680016040802002]], 'face': [475, 99, 430, 430]}], 'final': False, 'count': 99}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,617 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33371 to worker 
+    INFO 2020-11-30 16:12:55,629 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33371 to worker 
+    INFO 2020-11-30 16:12:55,630 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:55,650 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34688 to worker 
+    INFO 2020-11-30 16:12:55,652 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.004360318183898926, 5.205378329264931e-06, 0.0037326947785913944, 0.00013057503383606672, 0.04040142521262169, 0.0007971427985467017, 0.950572669506073]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 100}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,657 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34688 to worker 
+    INFO 2020-11-30 16:12:55,671 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34688 to worker 
+    INFO 2020-11-30 16:12:55,703 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:55,709 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33349 to worker 
+    INFO 2020-11-30 16:12:55,715 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33349 to worker 
+    INFO 2020-11-30 16:12:55,722 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33349 to worker 
+    INFO 2020-11-30 16:12:55,742 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33287 to worker 
+    INFO 2020-11-30 16:12:55,749 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33287 to worker 
+    INFO 2020-11-30 16:12:55,751 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0038527504075318575, 7.38604740035953e-06, 0.0032210496719926596, 0.00012260004587005824, 0.048304539173841476, 0.0006405772874131799, 0.943851113319397]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 101}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,756 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33287 to worker 
+    INFO 2020-11-30 16:12:55,761 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:55,788 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34638 to worker 
+    INFO 2020-11-30 16:12:55,789 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 102}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,795 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34638 to worker 
+    INFO 2020-11-30 16:12:55,801 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34638 to worker 
+    INFO 2020-11-30 16:12:55,806 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:55,826 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33322 to worker 
+    INFO 2020-11-30 16:12:55,833 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33322 to worker 
+    INFO 2020-11-30 16:12:55,834 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.007448369637131691, 7.840290891181212e-06, 0.006123662926256657, 0.00014633176033385098, 0.04108130931854248, 0.0014858669601380825, 0.9437066316604614]], 'face': [481, 99, 430, 430]}], 'final': False, 'count': 103}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,845 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33322 to worker 
+    INFO 2020-11-30 16:12:55,849 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:55,872 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33294 to worker 
+    INFO 2020-11-30 16:12:55,874 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.003931588958948851, 8.624586371297482e-06, 0.003276158357039094, 0.00013967447739560157, 0.04032306745648384, 0.000743341923225671, 0.9515775442123413]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 104}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,879 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33294 to worker 
+    INFO 2020-11-30 16:12:55,892 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33294 to worker 
+    INFO 2020-11-30 16:12:55,901 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:55,930 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34486 to worker 
+    INFO 2020-11-30 16:12:55,932 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.005559454672038555, 8.200629054044839e-06, 0.00411677360534668, 0.0001650773047003895, 0.04879184439778328, 0.0008069542236626148, 0.9405517578125]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 105}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,937 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34486 to worker 
+    INFO 2020-11-30 16:12:55,951 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34486 to worker 
+    INFO 2020-11-30 16:12:55,983 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:55,985 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.00546987634152174, 9.712523024063557e-06, 0.0034113728906959295, 0.00017907653818838298, 0.040672317147254944, 0.0006574119906872511, 0.9496002197265625]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 106}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:55,989 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33270 to worker 
+    INFO 2020-11-30 16:12:55,996 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33270 to worker 
+    INFO 2020-11-30 16:12:56,002 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33270 to worker 
+    INFO 2020-11-30 16:12:56,019 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33325 to worker 
+    INFO 2020-11-30 16:12:56,021 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.005658927373588085, 1.2771994079230353e-05, 0.0034906722139567137, 0.00016199458332266659, 0.04561258479952812, 0.0007262565195560455, 0.9443367719650269]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 107}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,026 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33325 to worker 
+    INFO 2020-11-30 16:12:56,033 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33325 to worker 
+    INFO 2020-11-30 16:12:56,034 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:56,059 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34580 to worker 
+    INFO 2020-11-30 16:12:56,061 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.00788205862045288, 4.063500455231406e-06, 0.004172076936811209, 0.0002789106220006943, 0.022897224873304367, 0.000515844498295337, 0.964249849319458]], 'face': [484, 99, 430, 430]}], 'final': False, 'count': 108}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,066 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34580 to worker 
+    INFO 2020-11-30 16:12:56,078 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34580 to worker 
+    INFO 2020-11-30 16:12:56,078 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:56,100 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33328 to worker 
+    INFO 2020-11-30 16:12:56,101 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.010188788175582886, 2.8909418688272126e-05, 0.005614005029201508, 0.00018182264466304332, 0.03900924324989319, 0.0015830197371542454, 0.9433942437171936]], 'face': [475, 99, 430, 430]}], 'final': False, 'count': 109}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,106 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33328 to worker 
+    INFO 2020-11-30 16:12:56,121 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33328 to worker 
+    INFO 2020-11-30 16:12:56,133 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:56,160 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33209 to worker 
+    INFO 2020-11-30 16:12:56,162 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.00803675502538681, 9.857590157480445e-06, 0.005007900297641754, 0.00031251725158654153, 0.042441725730895996, 0.0010973804164677858, 0.9430938959121704]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 110}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,167 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33209 to worker 
+    INFO 2020-11-30 16:12:56,181 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33209 to worker 
+    INFO 2020-11-30 16:12:56,183 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.009271174669265747, 2.1889394702157006e-05, 0.004856518469750881, 0.00010640944674378261, 0.04736948758363724, 0.0013047907268628478, 0.9370697140693665]], 'face': [475, 99, 430, 430]}], 'final': False, 'count': 111}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,193 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:56,222 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34637 to worker 
+    INFO 2020-11-30 16:12:56,224 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.009098177775740623, 2.3222428353619762e-05, 0.005492509808391333, 0.00015310748131014407, 0.04237072169780731, 0.0013199049280956388, 0.941542387008667]], 'face': [475, 99, 430, 430]}], 'final': False, 'count': 112}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,229 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34637 to worker 
+    INFO 2020-11-30 16:12:56,236 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34637 to worker 
+    INFO 2020-11-30 16:12:56,252 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33340 to worker 
+    INFO 2020-11-30 16:12:56,258 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33340 to worker 
+    INFO 2020-11-30 16:12:56,265 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33340 to worker 
+    INFO 2020-11-30 16:12:56,267 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0063880798406898975, 1.0087639566336293e-05, 0.004249607678502798, 0.00017541160923428833, 0.0375545509159565, 0.0010220741387456656, 0.9506001472473145]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 113}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,283 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33362 to worker 
+    INFO 2020-11-30 16:12:56,290 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33362 to worker 
+    INFO 2020-11-30 16:12:56,297 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33362 to worker 
+    INFO 2020-11-30 16:12:56,308 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:56,309 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.0053405012004077435, 1.3840498468198348e-05, 0.0034195769112557173, 0.00012108592636650428, 0.036169685423374176, 0.0007446631207130849, 0.9541906714439392]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 114}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,332 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34552 to worker 
+    INFO 2020-11-30 16:12:56,339 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34552 to worker 
+    INFO 2020-11-30 16:12:56,346 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34552 to worker 
+    INFO 2020-11-30 16:12:56,351 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:56,352 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.004881436936557293, 9.174318620353006e-06, 0.0032736510038375854, 0.00014069757889956236, 0.03319932520389557, 0.0010543521493673325, 0.9574413299560547]], 'face': [481, 102, 430, 430]}], 'final': False, 'count': 115}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,379 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33295 to worker 
+    INFO 2020-11-30 16:12:56,386 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33295 to worker 
+    INFO 2020-11-30 16:12:56,387 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 116}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,407 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33295 to worker 
+    INFO 2020-11-30 16:12:56,434 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:56,436 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.011956317350268364, 1.6547162886126898e-05, 0.004834040068089962, 0.00011904780694749206, 0.08149848878383636, 0.00171539222355932, 0.899860143661499]], 'face': [481, 102, 430, 430]}], 'final': False, 'count': 117}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,441 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34614 to worker 
+    INFO 2020-11-30 16:12:56,447 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34614 to worker 
+    INFO 2020-11-30 16:12:56,455 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34614 to worker 
+    INFO 2020-11-30 16:12:56,472 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36761 to worker 
+    INFO 2020-11-30 16:12:56,474 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 118}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,479 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36761 to worker 
+    INFO 2020-11-30 16:12:56,486 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36761 to worker 
+    INFO 2020-11-30 16:12:56,503 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33944 to worker 
+    INFO 2020-11-30 16:12:56,510 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33944 to worker 
+    INFO 2020-11-30 16:12:56,517 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33944 to worker 
+    INFO 2020-11-30 16:12:56,518 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 119}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,525 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33799 to worker 
+    INFO 2020-11-30 16:12:56,532 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33799 to worker 
+    INFO 2020-11-30 16:12:56,538 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33799 to worker 
+    INFO 2020-11-30 16:12:56,574 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:56,576 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 120}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,580 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34458 to worker 
+    INFO 2020-11-30 16:12:56,587 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34458 to worker 
+    INFO 2020-11-30 16:12:56,588 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 121}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,594 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34458 to worker 
+    INFO 2020-11-30 16:12:56,614 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33486 to worker 
+    INFO 2020-11-30 16:12:56,621 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33486 to worker 
+    INFO 2020-11-30 16:12:56,622 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 122}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,631 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33486 to worker 
+    INFO 2020-11-30 16:12:56,651 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33481 to worker 
+    INFO 2020-11-30 16:12:56,652 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 123}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,657 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33481 to worker 
+    INFO 2020-11-30 16:12:56,664 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33481 to worker 
+    INFO 2020-11-30 16:12:56,672 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34676 to worker 
+    INFO 2020-11-30 16:12:56,679 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34676 to worker 
+    INFO 2020-11-30 16:12:56,680 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 124}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,686 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34676 to worker 
+    INFO 2020-11-30 16:12:56,686 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:56,706 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33489 to worker 
+    INFO 2020-11-30 16:12:56,714 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33489 to worker 
+    INFO 2020-11-30 16:12:56,715 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 125}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,722 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33489 to worker 
+    INFO 2020-11-30 16:12:56,726 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:56,754 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33418 to worker 
+    INFO 2020-11-30 16:12:56,756 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 126}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,761 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33418 to worker 
+    INFO 2020-11-30 16:12:56,777 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33418 to worker 
+    INFO 2020-11-30 16:12:56,802 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34646 to worker 
+    INFO 2020-11-30 16:12:56,807 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34646 to worker 
+    INFO 2020-11-30 16:12:56,824 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34646 to worker 
+    INFO 2020-11-30 16:12:56,825 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 127}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,846 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33447 to worker 
+    INFO 2020-11-30 16:12:56,853 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33447 to worker 
+    INFO 2020-11-30 16:12:56,870 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33447 to worker 
+    INFO 2020-11-30 16:12:56,871 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 128}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,878 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:56,905 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33366 to worker 
+    INFO 2020-11-30 16:12:56,907 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 129}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,911 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33366 to worker 
+    INFO 2020-11-30 16:12:56,918 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33366 to worker 
+    INFO 2020-11-30 16:12:56,918 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:56,945 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34711 to worker 
+    INFO 2020-11-30 16:12:56,947 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 130}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,952 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34711 to worker 
+    INFO 2020-11-30 16:12:56,963 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34711 to worker 
+    INFO 2020-11-30 16:12:56,963 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:56,987 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33388 to worker 
+    INFO 2020-11-30 16:12:56,989 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 131}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:56,993 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33388 to worker 
+    INFO 2020-11-30 16:12:57,008 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33388 to worker 
+    INFO 2020-11-30 16:12:57,018 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:57,048 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33425 to worker 
+    INFO 2020-11-30 16:12:57,054 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33425 to worker 
+    INFO 2020-11-30 16:12:57,066 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 132}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,071 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33425 to worker 
+    INFO 2020-11-30 16:12:57,078 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:57,105 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34648 to worker 
+    INFO 2020-11-30 16:12:57,107 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 133}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,112 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34648 to worker 
+    INFO 2020-11-30 16:12:57,119 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34648 to worker 
+    INFO 2020-11-30 16:12:57,120 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:57,145 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33488 to worker 
+    INFO 2020-11-30 16:12:57,147 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 134}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,152 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33488 to worker 
+    INFO 2020-11-30 16:12:57,167 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33488 to worker 
+    INFO 2020-11-30 16:12:57,173 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:57,187 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33468 to worker 
+    INFO 2020-11-30 16:12:57,193 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33468 to worker 
+    INFO 2020-11-30 16:12:57,209 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33468 to worker 
+    INFO 2020-11-30 16:12:57,210 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 135}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,233 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:57,247 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34639 to worker 
+    INFO 2020-11-30 16:12:57,254 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34639 to worker 
+    INFO 2020-11-30 16:12:57,255 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 136}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,271 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34639 to worker 
+    INFO 2020-11-30 16:12:57,292 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33448 to worker 
+    INFO 2020-11-30 16:12:57,293 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 137}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,298 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33448 to worker 
+    INFO 2020-11-30 16:12:57,305 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33448 to worker 
+    INFO 2020-11-30 16:12:57,305 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:57,332 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33418 to worker 
+    INFO 2020-11-30 16:12:57,334 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 138}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,338 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33418 to worker 
+    INFO 2020-11-30 16:12:57,349 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33418 to worker 
+    INFO 2020-11-30 16:12:57,349 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:57,373 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34685 to worker 
+    INFO 2020-11-30 16:12:57,375 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 139}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,380 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34685 to worker 
+    INFO 2020-11-30 16:12:57,394 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34685 to worker 
+    INFO 2020-11-30 16:12:57,414 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33485 to worker 
+    INFO 2020-11-30 16:12:57,421 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33485 to worker 
+    INFO 2020-11-30 16:12:57,427 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33485 to worker 
+    INFO 2020-11-30 16:12:57,446 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33402 to worker 
+    INFO 2020-11-30 16:12:57,447 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 140}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,452 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33402 to worker 
+    INFO 2020-11-30 16:12:57,459 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33402 to worker 
+    INFO 2020-11-30 16:12:57,460 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:57,485 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34700 to worker 
+    INFO 2020-11-30 16:12:57,487 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 141}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,492 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34700 to worker 
+    INFO 2020-11-30 16:12:57,504 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34700 to worker 
+    INFO 2020-11-30 16:12:57,524 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33459 to worker 
+    INFO 2020-11-30 16:12:57,527 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 142}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,531 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33459 to worker 
+    INFO 2020-11-30 16:12:57,547 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33459 to worker 
+    INFO 2020-11-30 16:12:57,548 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 143}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,559 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:57,587 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33415 to worker 
+    INFO 2020-11-30 16:12:57,591 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33415 to worker 
+    INFO 2020-11-30 16:12:57,593 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.026136020198464394, 3.561278208508156e-05, 0.011822330765426159, 0.00039370241574943066, 0.10552829504013062, 0.003305557882413268, 0.8527784943580627]], 'face': [481, 99, 430, 430]}], 'final': False, 'count': 144}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,599 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33415 to worker 
+    INFO 2020-11-30 16:12:57,605 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:57,632 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34656 to worker 
+    INFO 2020-11-30 16:12:57,633 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 145}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,639 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34656 to worker 
+    INFO 2020-11-30 16:12:57,646 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34656 to worker 
+    INFO 2020-11-30 16:12:57,646 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:57,676 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33213 to worker 
+    INFO 2020-11-30 16:12:57,678 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 146}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,678 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33213 to worker 
+    INFO 2020-11-30 16:12:57,690 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 33213 to worker 
+    INFO 2020-11-30 16:12:57,694 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:57,717 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34658 to worker 
+    INFO 2020-11-30 16:12:57,719 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.018844712525606155, 2.4736484192544594e-05, 0.009387698024511337, 0.0003624881210271269, 0.10276728123426437, 0.002662769053131342, 0.865950345993042]], 'face': [481, 99, 430, 430]}], 'final': False, 'count': 147}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,724 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34658 to worker 
+    INFO 2020-11-30 16:12:57,735 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34658 to worker 
+    INFO 2020-11-30 16:12:57,736 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:57,759 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36133 to worker 
+    INFO 2020-11-30 16:12:57,766 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36133 to worker 
+    INFO 2020-11-30 16:12:57,781 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 36133 to worker 
+    INFO 2020-11-30 16:12:57,783 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 148}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,801 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32875 to worker 
+    INFO 2020-11-30 16:12:57,808 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32875 to worker 
+    INFO 2020-11-30 16:12:57,814 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32875 to worker 
+    INFO 2020-11-30 16:12:57,821 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:57,850 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32752 to worker 
+    INFO 2020-11-30 16:12:57,852 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.017089897766709328, 4.7672314394731075e-05, 0.008459066040813923, 0.00016032351413741708, 0.0864407867193222, 0.0030987304635345936, 0.8847035765647888]], 'face': [475, 99, 430, 430]}], 'final': False, 'count': 149}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,857 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32752 to worker 
+    INFO 2020-11-30 16:12:57,860 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32752 to worker 
+    INFO 2020-11-30 16:12:57,863 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:57,891 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34278 to worker 
+    INFO 2020-11-30 16:12:57,893 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.014830490574240685, 2.1757514332421124e-05, 0.007464233785867691, 0.00021347688743844628, 0.07465224713087082, 0.0024237590841948986, 0.900394082069397]], 'face': [481, 99, 430, 430]}], 'final': False, 'count': 150}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,898 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34278 to worker 
+    INFO 2020-11-30 16:12:57,906 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34278 to worker 
+    INFO 2020-11-30 16:12:57,926 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32590 to worker 
+    INFO 2020-11-30 16:12:57,928 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.00853294599801302, 1.49762854562141e-05, 0.00506745558232069, 0.000179628623300232, 0.054763779044151306, 0.0018469661008566618, 0.9295942187309265]], 'face': [481, 99, 430, 430]}], 'final': False, 'count': 151}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,932 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32590 to worker 
+    INFO 2020-11-30 16:12:57,946 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32590 to worker 
+    INFO 2020-11-30 16:12:57,965 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32546 to worker 
+    INFO 2020-11-30 16:12:57,967 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.008566119708120823, 4.9587953981244937e-05, 0.005273234564810991, 9.997143934015185e-05, 0.048103682696819305, 0.0019169965526089072, 0.9359903931617737]], 'face': [475, 99, 430, 430]}], 'final': False, 'count': 152}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:57,972 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32546 to worker 
+    INFO 2020-11-30 16:12:57,982 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 32546 to worker 
+    INFO 2020-11-30 16:12:57,983 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 1 to worker 
+    INFO 2020-11-30 16:12:58,007 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34114 to worker 
+    INFO 2020-11-30 16:12:58,008 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [], 'face': []}], 'final': False, 'count': 153}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:58,014 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34114 to worker 
+    INFO 2020-11-30 16:12:58,028 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34114 to worker 
+    INFO 2020-11-30 16:12:58,038 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:58,064 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34149 to worker 
+    INFO 2020-11-30 16:12:58,066 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'result': {'hypotheses': [{'transcript': 'return result', 'emo': [[0.007288678549230099, 1.4968059986131266e-05, 0.004045445006340742, 0.00011865755368489772, 0.042941655963659286, 0.0011133740190416574, 0.9444772601127625]], 'face': [479, 100, 430, 430]}], 'final': False, 'count': 154}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:58,071 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34149 to worker 
+    INFO 2020-11-30 16:12:58,078 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 34149 to worker 
+    INFO 2020-11-30 16:12:58,079 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'bytes'>) of length 2 to worker 
+    INFO 2020-11-30 16:12:58,079 767736ae-40c0-42d9-92ed-9096b38a6a63: Forwarding client message (<class 'str'>) of length 3 to worker 
+    INFO 2020-11-30 16:12:58,179 767736ae-40c0-42d9-92ed-9096b38a6a63: Sending event {'status': 0, 'adaptation_state': {'id': '767736ae-40c0-42d9-92ed-9096b38a6a63', 'segment': 0, 'result': {'hypotheses': [{'transcript': 'received EOS, stop'}], 'final': True}, 'time': '2020-11-30T16:12:58'}, 'id': '767736ae-40c0-42d9-92ed-9096b38a6a63'} to client 
+    INFO 2020-11-30 16:12:58,213 767736ae-40c0-42d9-92ed-9096b38a6a63: Handling on_connection_close() 
+    INFO 2020-11-30 16:12:58,213 767736ae-40c0-42d9-92ed-9096b38a6a63: Closing worker connection 
+    INFO 2020-11-30 16:12:58,214 Worker <__main__.WorkerSocketHandler object at 0x7f5115924d30> leaving 
+    INFO 2020-11-30 16:12:59,437 101 GET /worker/ws/speech (172.17.0.1) 0.79ms 
+    INFO 2020-11-30 16:12:59,437 New worker available <__main__.WorkerSocketHandler object at 0x7f51158bc438> 

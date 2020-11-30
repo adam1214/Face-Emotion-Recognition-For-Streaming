@@ -2,8 +2,8 @@
 rm -rf ./*.log
 rm -rf ./time_result.txt
 MASTER="140.114.84.204"
-PORT1=8134
-PORT2=22
+PORT2=8134
+PORT1=5000
 
 #usage(){
 #  echo "Creates a worker and connects it to a master.";
