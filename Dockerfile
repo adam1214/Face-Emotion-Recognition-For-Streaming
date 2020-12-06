@@ -66,6 +66,6 @@ RUN ln -s \
   /usr/local/python/cv2/python-3.7/cv2.cpython-37m-x86_64-linux-gnu.so \
   /usr/local/lib/python3.7/site-packages/cv2.so
 
-
-COPY ./kaldi-gstreamer-server/kaldigstserver/client_example.py ./
-COPY ./example_wav/Test.mp4 ./
+WORKDIR /media/fer_streaming
+#COPY ./kaldi-gstreamer-server/kaldigstserver/client_example.py ./
+#COPY ./example_wav/Test.mp4 ./
