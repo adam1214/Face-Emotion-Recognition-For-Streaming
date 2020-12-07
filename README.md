@@ -11,9 +11,8 @@
 ## Requirement
 * **Image**   
 	1. Install docker, opencv, keras, tornado in your device  
-	2. Use your account login to gitlab `docker login biicgitlab.ee.nthu.edu.tw:5050`  
-	3. Download the server image `sudo docker pull 140.114.84.199:4999/fer_streaming_gpu`  
-	4. Download the client image `sudo docker pull biicgitlab.ee.nthu.edu.tw:5050/prod/engineer/fers_client`  
+	2. Download the server image `sudo docker pull 140.114.84.199:4999/fer_streaming_gpu`  
+	3. Download the client image `sudo docker pull 140.114.84.199:4999/fers_client`  
 * **Code structure**  
 	1. `git clone https://biicgitlab.ee.nthu.edu.tw/prod/engineer/fer_streaming_gpu_ver.git`  
 
