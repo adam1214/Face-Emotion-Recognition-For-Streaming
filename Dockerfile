@@ -67,5 +67,3 @@ RUN ln -s \
   /usr/local/lib/python3.7/site-packages/cv2.so
 
 WORKDIR /media/fer_streaming
-#COPY ./kaldi-gstreamer-server/kaldigstserver/client_example.py ./
-#COPY ./example_wav/Test.mp4 ./
