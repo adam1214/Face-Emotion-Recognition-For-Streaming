@@ -8,7 +8,7 @@ then
     -v ${FERS_ROOT}:/media/fer_streaming \
     -v /dev/video0:/dev/video0 -it --rm --name Fer_client \
     --link Fer_server \
-    fer_client \
+    140.114.84.199:4999/fers_client \
     /bin/bash -c "python ./kaldi-gstreamer-server/kaldigstserver/client_example.py -u ws://Fer_server:80/client/ws/speech -v True -info False -1"
 
 else
@@ -18,6 +18,6 @@ else
     -v ${FERS_ROOT}:/media/fer_streaming \
     -v /dev/video0:/dev/video0 -it --rm --name Fer_client \
     --link Fer_server \
-    fer_client \
+    140.114.84.199:4999/fers_client \
     /bin/bash -c "python ./kaldi-gstreamer-server/kaldigstserver/client_example.py -u ws://Fer_server:80/client/ws/speech -v True -info False $1"
 fi
