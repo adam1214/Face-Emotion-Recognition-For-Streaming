@@ -29,8 +29,6 @@ RUN pip --no-cache-dir install \
     pillow==6.1\
     scipy==1.2.1 \
     py3nvml \
-    keras==2.3.1 \
-    tensorflow==1.15.0 \
     statistics \
     matplotlib \
     tornado \
